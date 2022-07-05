@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:complexType name="typecharge">
+        <xs:sequence>
+            <xs:element name="credit" type="xs:positiveInteger"/>
+            <xs:element name="coef" type="xs:positiveInteger"/>
+            <xs:element name="volume" type="xs:positiveInteger"/>
+            <xs:element name="typyvolume">
+            <xs:complexType>
+                <xs:all>
+                    <xs:element name="CM" type="xs:positiveInteger"/>
+                    <xs:element name="TDTP" type="xs:positiveInteger"/>
+                    <xs:element name="TPE" type="xs:positiveInteger"/>
+                </xs:all>
+            </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="typedesc">
+        <xs:sequence>
+            <xs:element name="intitulé" type="xs:string"/>
+            <xs:element name="ue" type="xs:string"/>
+            <xs:element name="chrg" type="xs:string"/>
+            <xs:element name="semestre" type="xs:string"/>
+            <xs:element name="niveau" type="xs:string"/>
+            <xs:element name="prerequis" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:group name="prenom-nom">
+        <xs:sequence>
+            <xs:element name="prenom" type="xs:string"/>
+            <xs:element name="nom" type="xs:string"/>
+        </xs:sequence>
+    </xs:group>
+    <xs:complexType name="personne">
+        <xs:group ref="prenom-nom"/> 
+    </xs:complexType>
+    <xs:complexType name="enseignants">
+        <xs:complexContent>
+            <xs:extension base="personne">
+                <xs:sequence>
+                    <xs:element name="courriel" type="xs:string"/>
+                    <xs:element name="heureBureau" type="xs:string"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="enseignants">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="enseignant" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="num" type="xs:positiveInteger"/>
+    </xs:complexType>
+    </xs:element>
+</xs:schema> 

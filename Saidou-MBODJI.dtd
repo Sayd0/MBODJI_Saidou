@@ -1,0 +1,24 @@
+<!ELEMENT syllabus (cours*)>
+<!ELEMENT cours (description,enseignants+)>
+<!ATTLIST cours code CDATA #REQUIRED>
+<!ELEMENT description (intitulé,ue,charge,semestre,niveau,prerequis)>
+    <!ELEMENT intitulé (#PCDATA)>
+    <!ELEMENT ue (#PCDATA)>
+    <!ELEMENT charge (credit,coef,volume)>
+        <!ELEMENT credit (#PCDATA)>
+        <!ELEMENT coef (#PCDATA)>
+        <!ELEMENT volume (CM,TDTP,TPE)>
+            <!ELEMENT CM (#PCDATA)>
+            <!ELEMENT TDTP (#PCDATA)>
+            <!ELEMENT TPE (#PCDATA)>
+    <!ELEMENT semestre (#PCDATA)>
+    <!ELEMENT niveau (#PCDATA)>
+    <!ELEMENT prerequis (#PCDATA)>
+<!ELEMENT enseignants (enseignant+)>
+<!ATTLIST enseignants num CDATA #REQUIRED> 
+<!ELEMENT enseignant (prenom,nom,addressBureau,courreil,heureBureau)>
+    <!ELEMENT prenom (#PCDATA)>
+    <!ELEMENT nom (#PCDATA)>
+    <!ELEMENT addressBureau (#PCDATA)>
+    <!ELEMENT courreil (#PCDATA)>
+    <!ELEMENT heureBureau (#PCDATA)>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE syllabus SYSTEM "Saïdou-MBODJI.dtd">
+<syllabus>
+    <cours code="INF 1141">
+        <description>
+            <intitulé>Anglais 1</intitulé>
+            <ue>Humanites et entreprises</ue>
+            <chrg>
+                <credit>6</credit>
+                <coef>2</coef>
+                <volume>
+                    <CM>20H</CM>
+                    <TDTP>20H</TDTP>
+                    <TPE>40H</TPE>
+                </volume>
+            </chrg>
+            <semestre>S1</semestre>
+            <niveau>L1</niveau>
+            <prerequis>Grammaire Angais basique</prerequis>
+        </description>
+        <enseignants num="1">
+            <enseignant>
+                <prenom>Benois Denis</prenom>
+                <nom>SAMB</nom>
+                <addressBureau>Neant</addressBureau>
+                <courriel>bdsamb@univ-thies.sn</courriel>
+                <heureBureau>Neant</heureBureau>
+            </enseignant>
+        </enseignants>
+    </cours>
+</syllabus>
